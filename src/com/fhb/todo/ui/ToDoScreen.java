@@ -9,7 +9,6 @@ import net.rim.device.api.ui.component.ButtonField;
 import net.rim.device.api.ui.component.CheckboxField;
 import net.rim.device.api.ui.component.Dialog;
 import net.rim.device.api.ui.component.LabelField;
-import net.rim.device.api.ui.component.RichTextField;
 import net.rim.device.api.ui.component.TextField;
 import net.rim.device.api.ui.container.MainScreen;
 
@@ -21,17 +20,7 @@ public class ToDoScreen extends MainScreen {
 		
 		this.taskManager = tm;
 		
-		this.renderNewBlock();
-//		
-//		
-//		
-//			add(new TextField());
-//        LabelField title = new LabelField("ToDo", LabelField.ELLIPSIS | LabelField.USE_ALL_WIDTH); 
-//        setTitle(title); 
-//        add(new RichTextField("yo!"));
-//        add(new CheckboxField());
-//        
-//        
+		this.renderNewBlock();    
         this.renderTasks();
 	}
 	
