@@ -20,7 +20,7 @@ public class ToDoScreen extends MainScreen {
 		
 		this.taskManager = tm;
 		
-		this.renderNewBlock();    
+//		this.renderNewBlock();    
         this.renderTasks();
 	}
 	
@@ -45,8 +45,20 @@ public class ToDoScreen extends MainScreen {
     }
 	
 	private void renderTasks() {
-		for(Task t : this.taskManager.getTasks()) {
-			add(new CheckboxField(t.getTitle(), false));
+		final TaskManager tm = this.taskManager;
+		
+		for(final Task t : this.taskManager.getTasks()) {
+			CheckboxField cbf = new CheckboxField(t.getTitle(), t.isFinished(), Field.FIELD_RIGHT | Field.USE_ALL_WIDTH);
+
+			cbf.setChangeListener(new FieldChangeListener() {
+				public void fieldChanged(Field field, int context) {
+					CheckboxField cbf = (CheckboxField) field;
+					t.setFinished(cbf.getChecked());
+					tm.saveTask(t);
+				}
+			});
+
+			add(cbf);
 		}
 	}
 }

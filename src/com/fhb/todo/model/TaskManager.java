@@ -46,4 +46,9 @@ public class TaskManager {
     	this.tasks.removeElement(t);
     	this.saveTasks();
     }
+    
+    public void saveTask(Task t) {
+    	this.tasks.setElementAt(t, this.tasks.indexOf(t));
+    	this.saveTasks();
+    }
 }
