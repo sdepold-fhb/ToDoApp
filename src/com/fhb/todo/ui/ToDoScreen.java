@@ -20,8 +20,16 @@ public class ToDoScreen extends MainScreen {
 		
 		this.taskManager = tm;
 		
-//		this.renderNewBlock();    
-        this.renderTasks();
+//		this.renderNewBlock(); 
+		
+		// render late tasks
+		add(new LabelField("Late tasks:", Field.USE_ALL_WIDTH));
+		renderTasks(taskManager.getTasks(TaskManager.LATE));
+		
+		// render in-time-tasks
+		add(new LabelField("", Field.USE_ALL_WIDTH));
+		add(new LabelField("In-time tasks:", Field.USE_ALL_WIDTH));
+		renderTasks(taskManager.getTasks(TaskManager.IN_TIME));
 	}
 	
 	private void renderNewBlock() {
@@ -44,10 +52,10 @@ public class ToDoScreen extends MainScreen {
 		return true; 
     }
 	
-	private void renderTasks() {
+	private void renderTasks(Task[] tasks) {
 		final TaskManager tm = this.taskManager;
 		
-		for(final Task t : this.taskManager.getTasks()) {
+		for(final Task t : tasks) {
 			CheckboxField cbf = new CheckboxField(t.getTitle(), t.isFinished(), Field.FIELD_RIGHT | Field.USE_ALL_WIDTH);
 
 			cbf.setChangeListener(new FieldChangeListener() {
