@@ -1,0 +1,31 @@
+<loader version="1.0">
+	<application id="test">
+		<name >
+			ToDo
+		</name>
+		<description >
+			
+		</description>
+		<version >
+			1.0.0
+		</version>
+		<vendor >
+			Koerner Depold
+		</vendor>
+		<copyright >
+			Copyright (c) 2010 Koerner Depold
+		</copyright>
+		<fileset Java="1.49" _blackberryVersion="[5.0.0)">
+			<directory >
+				5.0.0
+			</directory>
+			<files >
+				test.cod
+
+			</files>
+
+		</fileset>
+
+	</application>
+
+</loader>

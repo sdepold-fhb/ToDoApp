@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+RIM-COD-Module-Name: test
+RIM-COD-Module-Dependencies: net_rim_cldc
+MIDlet-Jar-Size: 8678
+MIDlet-1: ToDo,,
+RIM-COD-Creation-Time: 1289723079
+MIDlet-Jar-URL: ToDo.jar
+RIM-COD-URL: test.cod
+RIM-COD-SHA1: 9c 36 74 4b 7d 56 5a ad ed 74 da b0 18 d3 04 f3 77 13 33 a8
+RIM-COD-Size: 3156
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.0.0
+MIDlet-Name: ToDo
+MIDlet-Vendor: Koerner Depold
+MicroEdition-Profile: MIDP-2.0
+RIM-MIDlet-Flags-1: 1
